@@ -8,8 +8,8 @@ import App from './App';
 import  Home from './components/home';
 import  Test from './components/test';
 import * as serviceWorker from './serviceWorker';
-import store from '../src/store';
-import { persistor } from '../src/store'
+import store from '../src/redux/store';
+import { persistor } from '../src/redux/store'
 
 ReactDOM.render(
 	<React.StrictMode>
@@ -19,7 +19,7 @@ ReactDOM.render(
 					<Route path="/home" component={Home} />
 					<Route path="/test" component={Test} />
 				</Router>
-			</PersistGate>
+				</PersistGate>
 		</Provider>
 	</React.StrictMode>,
 	document.getElementById('root')

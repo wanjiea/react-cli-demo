@@ -3,7 +3,7 @@
 import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';  //引入redux-saga中间件 来做到异步修改
 import { watchIncrementAsync } from '../sagas/index'
-import reducer from '../reducers/index';
+import reducer from '../reducers';
 
 //持久化存储
 import {persistStore, persistReducer} from 'redux-persist';

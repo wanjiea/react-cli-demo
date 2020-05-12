@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { increment } from '../../action';
+import { increment } from '../../redux/action';
 import Api from '../../api';
 
 class  Test extends Component {
