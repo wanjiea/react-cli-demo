@@ -1,5 +1,4 @@
 
-//计算redux的数据修改     ----逻辑层
 import actionType from '../action/index';
 const initialState = {
     number: 0

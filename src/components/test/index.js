@@ -32,6 +32,6 @@ class  Test extends Component {
 }
 export default connect(
     state => ({
-        number: state.number //redux视图层实时渲染
+        number: state.increment.number //redux视图层实时渲染
     })
 )(Test);
