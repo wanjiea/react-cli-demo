@@ -7,21 +7,22 @@ import './index.css';
 import App from './App';
 import  Home from './components/home';
 import  Test from './components/test';
+import  Hoc from './components/hoc';
 import * as serviceWorker from './serviceWorker';
 import store from '../src/redux/store';
 import { persistor } from '../src/redux/store'
 
 ReactDOM.render(
-	<React.StrictMode>
-		<Provider store={store}>
-			<PersistGate loading={null} persistor={persistor}>
-				<Router path="/app" component={ App }>
-					<Route path="/home" component={Home} />
-					<Route path="/test" component={Test} />
-				</Router>
-				</PersistGate>
-		</Provider>
-	</React.StrictMode>,
+	<Provider store={store}>
+		<PersistGate loading={null} persistor={persistor}>
+			<Router path="/app" component={ App }>
+				<Route path="/home" component={Home} />
+				<Route path="/test" component={Test} />
+				<Route path="/hoc" component={Hoc} />
+			</Router>
+		</PersistGate>
+	</Provider>
+	,
 	document.getElementById('root')
 );
 
