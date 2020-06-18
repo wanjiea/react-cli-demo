@@ -9,8 +9,9 @@ import HTML5Backend from 'react-dnd-html5-backend';
 import { DragDropContext } from 'react-dnd';
 import update from 'immutability-helper';
 import Chapter from '../../assets/js/drag/Chapter';
+import { Route } from 'react-router';
 
-
+import {Link} from 'react-router-dom'; //路由跳转
     
 class  Home extends Component {
 
@@ -50,7 +51,7 @@ class  Home extends Component {
                 //         }
                 //     ]
                 },
-              ]
+            ]
         }
     }
 
@@ -128,25 +129,23 @@ class  Home extends Component {
           $splice: [[dragIndex, 1], [hoverIndex, 0, dragItem]]
         })
         this.setState({data: newData})
-      }
+    }
     
-      handleMoveLesson = (dragIndex, dragParentIndex, hoverIndex, hoverParentIndex) => {
-        const data = this.state.data
-        const dragItem = data[dragParentIndex].children[dragIndex]
-        const dragData = update(data, {
-          [dragParentIndex]: {
-            children: { $splice: [[dragIndex, 1]] }
-          }
-        })
-        const dropData = update(dragData, {
-          [hoverParentIndex]: {
-            children: { $splice: [[hoverIndex, 0, dragItem]] }
-          }
-        })
-        this.setState({data: dropData})
-      }
-
-
+    handleMoveLesson = (dragIndex, dragParentIndex, hoverIndex, hoverParentIndex) => {
+    const data = this.state.data
+    const dragItem = data[dragParentIndex].children[dragIndex]
+    const dragData = update(data, {
+        [dragParentIndex]: {
+        children: { $splice: [[dragIndex, 1]] }
+        }
+    })
+    const dropData = update(dragData, {
+        [hoverParentIndex]: {
+        children: { $splice: [[hoverIndex, 0, dragItem]] }
+        }
+    })
+    this.setState({data: dropData})
+    }
 
     render(){
         const { dataSource , columns } =  this.state;
@@ -157,8 +156,18 @@ class  Home extends Component {
                 <title>My Home</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
-            <p>这个是home页面</p>
-
+            <p>这个是home 列表拖拽页面</p>
+            <Link to="/hoc">跳转到hoc</Link>
+            <span 
+            style = {{
+                margin: '0 5px',
+                cursor: 'pointer'
+            }}
+            onClick={
+                () => {
+                    this.props.history.push('/hoc');
+                }
+            }>编程式导航跳转</span>
             <Table 
                 dataSource={dataSource} 
                 columns={columns} 

@@ -16,7 +16,6 @@ const withHighOrder2 = (WrappedComponent) => {
     }
 }
 
-
 const withLifeCycle  = (Component) => {
     class NewComponent extends React.Component {
         componentDidMount() {
