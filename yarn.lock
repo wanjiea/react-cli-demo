@@ -4004,7 +4004,7 @@ dir-glob@2.0.0:
     arrify "^1.0.1"
     path-type "^3.0.0"
 
-dnd-core@^7.2.0, dnd-core@^7.7.0:
+dnd-core@^7.7.0:
   version "7.7.0"
   resolved "http://registry.npm.souche-inc.com/dnd-core/download/dnd-core-7.7.0.tgz#3166aefc8c5b85ca4ade4ae836712a3108975fab"
   integrity sha1-MWau/IxbhcpK3kroNnEqMQiXX6s=
@@ -4840,8 +4840,8 @@ fbjs@^0.8.9:
 
 figgy-pudding@^3.5.1:
   version "3.5.2"
-  resolved "http://registry.npm.souche-inc.com/figgy-pudding/download/figgy-pudding-3.5.2.tgz#b4eee8148abb01dcf1d1ac34367d59e12fa61d6e"
-  integrity sha1-tO7oFIq7Adzx0aw0Nn1Z4S+mHW4=
+  resolved "https://registry.yarnpkg.com/figgy-pudding/-/figgy-pudding-3.5.2.tgz#b4eee8148abb01dcf1d1ac34367d59e12fa61d6e"
+  integrity sha512-0btnI/H8f2pavGMN8w40mlSKOfTK2SVJmBfBeVIj3kNw0swwgzyRq0d5TJVOwodFmtvpPeWPN/MCcfuWF0Ezbw==
 
 figures@^3.0.0:
   version "3.2.0"
@@ -9527,13 +9527,12 @@ react-dev-utils@^10.2.1:
     strip-ansi "6.0.0"
     text-table "0.2.0"
 
-react-dnd-html5-backend@7.2.0:
-  version "7.2.0"
-  resolved "http://registry.npm.souche-inc.com/react-dnd-html5-backend/download/react-dnd-html5-backend-7.2.0.tgz#4cde55fb690020d98d7b6f3d4400c56b2ae82dfa"
-  integrity sha1-TN5V+2kAINmNe289RADFayroLfo=
+react-dnd-html5-backend@^7.2.0:
+  version "7.7.0"
+  resolved "https://registry.yarnpkg.com/react-dnd-html5-backend/-/react-dnd-html5-backend-7.7.0.tgz#e2b8ea61a1bc34ba743b89cafcda6213b006c06a"
+  integrity sha512-JgKmWOxqorFyfGPeWV+SAPhVGFe6+LrOR24jETE9rrYZU5hCppzwK9ujjS508kWibeDvbfEgi9j5qC2wB1/MoQ==
   dependencies:
-    dnd-core "^7.2.0"
-    lodash "^4.17.11"
+    dnd-core "^7.7.0"
 
 react-dnd@^7.3.1:
   version "7.7.0"
@@ -10727,9 +10726,9 @@ sshpk@^1.7.0:
     tweetnacl "~0.14.0"
 
 ssri@^6.0.1:
-  version "6.0.1"
-  resolved "http://registry.npm.souche-inc.com/ssri/download/ssri-6.0.1.tgz#2a3c41b28dd45b62b63676ecb74001265ae9edd8"
-  integrity sha1-KjxBso3UW2K2Nnbst0ABJlrp7dg=
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/ssri/-/ssri-6.0.2.tgz#157939134f20464e7301ddba3e90ffa8f7728ac5"
+  integrity sha512-cepbSq/neFK7xB6A50KHN0xHDotYzq58wWCa5LeWqnPrHG8GzfEjO/4O8kpmcGW+oaxkvhEJCWgbgNk4/ZV93Q==
   dependencies:
     figgy-pudding "^3.5.1"
 
